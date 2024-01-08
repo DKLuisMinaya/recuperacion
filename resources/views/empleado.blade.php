@@ -195,10 +195,8 @@
 
                 <button type="submit">Agregar</button>
             </form>
+            <br>
             
-            <div class="input-group input-group-lg mb-3">
-        </div>
-       </section>
         
 </div>
   

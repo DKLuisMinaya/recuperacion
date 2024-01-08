@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalculoController;
 use App\Http\Controllers\EmpleadoController;
 use App\Http\Controllers\TareaController;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,7 @@ Route::get('/indexTarea',[TareaController::class, 'index']);
 
 Route::post('/registro',[EmpleadoController::class,'saveP']);
 Route::post('/registroT',[TareaController::class,'registrar']);
+
+Route::get('/calculo', [CalculoController::class, 'index']);
+Route::get('/filtrar', [EmpleadoController::class, 'filtrar']);
+Route::get('/datos', [EmpleadoController::class, 'mostrar'])->name('datos.mostrar');

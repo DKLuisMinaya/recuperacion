@@ -18,7 +18,8 @@ return new class extends Migration
             $table->integer('salario');
             $table->integer('horas');
             $table->string('departamento');
-            $table->boolean('estado')->default(false);
+            $table->boolean('estado')->default(true);
+            $table->boolean('pagado')->default(false);
             $table->foreignId('id_tarea')->constrained('tareas');
 
         });
