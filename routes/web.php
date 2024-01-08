@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\TareaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::post('/registro',[EmpleadoController::class,'saveP']);
+Route::get('/indexEmpleado',[EmpleadoController::class, 'index']);
+Route::get('/indexTarea',[TareaController::class, 'index']);
 
+Route::post('/registro',[EmpleadoController::class,'saveP']);
+Route::post('/registroT',[TareaController::class,'registrar']);

@@ -21,6 +21,7 @@ class EmpleadoController extends Controller
         $datos->horas = $request->horas;
         $datos->departamento = $request->departamento;
         $datos->estado = false;
+        $datos->id_tarea = $request->id_tarea;
         $datos->save();
         return back();
     }
