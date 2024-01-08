@@ -147,13 +147,20 @@
                     <p>Empleado</p>
                     </a>
                     </li>
-                    </ul>
                     <li class="nav-item">
                     <a href="http://127.0.0.1:8000/datos" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Empleado</p>
+                    <p>Datos</p>
                     </a>
                     </li>
+                    <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/calculo" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Salarios</p>
+                    </a>
+                    </li>
+                    </ul>
+                    
                    
                 </li>
           <li class="nav-item">

@@ -9,10 +9,10 @@ class CalculoController extends Controller
 {
     
     public function index(){
-        $vts = DB::table('ventas')
-        ->join('productos', 'id_producto', '=', 'productos.id')
-        ->select('ventas.*', 'productos.nombre')
+        $vts = DB::table('calculos')
+        ->join('empleados', 'id_empleado', '=', 'empleados.id')
+        ->select('calculos.*', 'empleados.nombre')
         ->get();
-        return view('ventas', compact('vts'));
+        return view('Salarios', compact('vts'));
     }
 }

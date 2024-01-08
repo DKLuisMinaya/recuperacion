@@ -133,18 +133,16 @@
                     </a>
                     <ul class="nav nav-treeview" style="display: block;">
                     <li class="nav-item">
-                    <a href="hhttp://127.0.0.1:8000/indexTarea" class="nav-link">
+                    <a href="http://127.0.0.1:8000/indexTarea" class="nav-link">
                     <i class="far fa-circle nav-icon" ></i>
-                        <p><Tarea>Tarea</Tarea></p>
+                        <p>Tareas</p>
                     </a>
                     </li>
                     <li class="nav-item">
                     <a href="http://127.0.0.1:8000/indexEmpleado" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Empleado</p>
+                    <p>Emoleado</p>
                     </a>
-                    </li>
-                    
                     </li>
                     <li class="nav-item">
                     <a href="http://127.0.0.1:8000/datos" class="nav-link active">
@@ -177,15 +175,26 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
        <section class="content">
-       <form action="{{url('registroT')}}" method="post">
-        @csrf
-        <h2>::Registro de Tarea::</h2>
-        <label>Tarea: </label>
-        <input type="text" id="nombre" name="tarea"><br><br>
-        <label>TiempoI: </label>
-        <input type="text" id="nombre" name="tiempoI"><br><br>
-        <button type="submit">Registrar</button>
-    </form>
+       <table border="1">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>Total en dolares</th>
+            <th>Empleado</th>
+            <th>Fecha</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            @foreach ($vts as $item)
+            <tr>
+            <td>{{$item->id}}</td>
+            <td>{{$item->precioTotal}}</td>
+            <td>{{$item->nombre}}</td>
+            <td>{{$item->fecha}}</td></tr>
+            @endforeach
+        </tbody>
+    </table>
        </section>
         
 </div>
